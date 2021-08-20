@@ -1,0 +1,48 @@
+{% extends 'modelo.html' %}
+{% load static %}
+
+{% block titulo %}
+    <title> Página Inicial </title>
+{% endblock %}
+
+{% block destaque %}
+{% endblock %}
+
+{% block conteudo %}
+<div class=" container ">
+    <div class="title">
+        <h3> Bem vindo paginas  </h3>
+        <img src="{% static 'img/logo.png' %}" width="200" alt="">
+    </div>
+
+
+ <div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Nome</span>
+  </div>
+     <p>Caio César da Silva Benedito</p>
+ </div>
+
+<div class="input-group">
+ <div class="input-group-prepend">
+    <span class="input-group-text">E-mail</span>
+  </div>
+    <p><a href="caiobenedito@msn.com">caiobenedito@msn.com</a></p>
+</div>
+
+<div class="input-group">
+<div class="input-group-prepend">
+    <span class="input-group-text">Endereço Github</span>
+</div>
+    <p><a href="https://github.com/caiobenedito">https://github.com/caiobenedito</a></p>
+</div>
+
+<div class="input-group">
+<div class="input-group-prepend">
+    <span class="input-group-text">Endereço Linkdin</span>
+</div>
+    <p><a href="https://www.linkedin.com/in/caio-c%C3%A9sar-da-silva-benedito-415963209/">             https://www.linkedin.com/in/caio-c%C3%A9sar-da-silva-benedito-415963209/</a></p>
+ </div>
+
+</div>
+{% endblock %}

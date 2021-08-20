@@ -1,0 +1,72 @@
+{% extends 'modelo.html' %}
+
+   {% block estilo %}
+    <style>
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+.bg-light1{
+  background: #C0C0C0;
+  padding: 0px 45%;
+  position: fixed;
+  top: 0;
+}
+
+.footer{
+  width: 150%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  background: #C0C0C0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottons{
+padding: 50px;
+}
+
+.form-group{
+width: 100%;
+padding: 10px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+    </style>
+    {% endblock %}
+
+{% block titulo %}
+<title> Sobre o Projeto </title>
+{% endblock %}
+
+{% block conteudo %}
+<div class="container">
+    <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Endereço de E-mail</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entre com o E-mail">
+
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Senha</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+
+  <div class="bottons">
+      <button type="submit" class="btn btn-primary">Login</button>
+      <a class="btn btn-primary" href="{% url 'cadastrar-usuario' %}" >Criar Conta</a>
+  </div>
+
+</form>
+</div>
+
+{% endblock %}

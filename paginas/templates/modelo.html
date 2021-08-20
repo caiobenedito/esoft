@@ -1,0 +1,129 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang:"pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    {% block estilo %}
+    <style>
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+.bg-light1{
+  background: #C0C0C0;
+  padding: 0px 45%;
+  position: fixed;
+  top: 0;
+}
+.title{
+    width: 60;
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+.container{
+  width: 150%;
+  justify-content: space-around;
+  padding: 80px;
+}
+.footer{
+  width: 150%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  background: #C0C0C0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+    </style>
+    {% endblock %}
+
+
+    {% block titulo %}
+    <div class="title">
+        <title> Modelo </title>
+    </div>
+
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+</head>
+<body>
+
+{% block menu%}
+<div class="bg-light1">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'inicio' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cadastrar-usuario' %}">Cadastrar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+{% endblock %}
+
+
+
+{% block conteudo %}
+<div class="container">
+
+    <h3>Template de Modelo</h3>
+    <p>conteúdo do site</p>
+</div>
+{% endblock %}
+
+{% block rodape %}
+<div class="footer">
+
+    <div class="column">
+        <p> Caio César da Silva Bendito</p>
+    </div>
+
+    <div class="column">
+        <p id="demo"></p>
+    </div>
+
+    <script>
+function myFunction() {
+  var d = new Date();
+  var n = d.getFullYear();
+  return n
+}
+document.getElementById("demo").innerHTML = myFunction();
+
+
+
+    </script>
+
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/cep.js' %}"></script>
+{% endblock %}
+</body>
+</html>

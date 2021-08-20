@@ -25,13 +25,13 @@ class ProdutoCreate(CreateView):
 class UsuarioUpdate(UpdateView):
     model = Usuario
     fields = ['nome', 'login', 'senha', 'cep', 'endereco', 'numero', 'complemento', 'bairro', 'cidade', 'estado']
-    template_name = 'form.html'
+    template_name = 'form-cadastrar-usuario.html'
     success_url = reverse_lazy('listar-usuarios')
 
 class ProdutoUpdate(UpdateView):
     model = Produto
     fields = ['id','nome','preco','estoque']
-    template_name = 'form.html'
+    template_name = 'form-cadastrar-produto.html'
     success_url = reverse_lazy('listar-produtos')
 
 ##################### update ########################

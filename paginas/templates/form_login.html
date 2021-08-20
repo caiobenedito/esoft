@@ -1,0 +1,26 @@
+{% extends 'modelo.html' %}
+
+{% block titulo %}
+<title> Tela de cadastro </title>
+{% endblock %}
+
+{% block conteudo %}
+<<div class="container">
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <h3>Entre seus dados de usuário:</h3>
+        <hr>
+         <form action="" method="post">
+         {% csrf_token %}
+         {{ form.as_p }}
+         <hr>
+        <div class="bottons">
+            <button type="submit" class="btn btn-primary">Entrar</button>
+            <a class="btn btn-primary" href="{% url 'cadastrar-usuario' %}" >Criar Conta</a>
+        </div>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}
+

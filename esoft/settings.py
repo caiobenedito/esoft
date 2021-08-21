@@ -130,5 +130,6 @@ STATICFILES_DIRS = [
 ]
 # configuracoes de autenticacao
 LOGIN_REDIRECT_URL='home'
-LOGIN_URL='login'
+LOGIN_URL='username'
 LOGOUT_REDIRECT_URL='inicio'
+AUTH_PROFILE_MODULE = 'cadastros.apps..Usuario'

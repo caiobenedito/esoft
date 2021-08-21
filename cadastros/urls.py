@@ -10,6 +10,9 @@ urlpatterns = [
     url(r'editar/usuario/(?P<pk>\d+)/$',UsuarioUpdate.as_view(),name='editar-usuario'),
     url(r'editar/produto/(?P<pk>\d+)/$',ProdutoUpdate.as_view(),name='editar-produto'),
 
+    #url(r'editar/usuario/(?P<pk>\d+)/$',UsuarioUpdate.as_view(),name='editar-usuario'),
+    #url(r'editar/produto/(?P<pk>\d+)/$',ProdutoUpdate.as_view(),name='editar-produto'),
+
     url(r'excluir/usuario/(?P<pk>\d+)/$',UsuarioDelete.as_view(),name='excluir-usuario'),
     url(r'excluir/produto/(?P<pk>\d+)/$',ProdutoDelete.as_view(),name='excluir-produto'),
 

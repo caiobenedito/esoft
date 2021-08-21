@@ -8,7 +8,7 @@ class IndexView(TemplateView):
     template_name = "index.html"
 
 class SobreView(TemplateView):
-    template_name = "login.html"
+    template_name = "username.html"
 
 class CadastrarView(TemplateView):
     template_name = 'cadastrar.html'

@@ -26,8 +26,8 @@
         {% for usuario in object_list %}
          <tr>
              <td>{{ usuario.nome }}</td>
-             <td>{{ usuario.login }}</td>
-             <td>{{ usuario.senha }}</td>
+             <td>{{ usuario.username }}</td>
+             <td>{{ usuario.password }}</td>
              <td>{{ usuario.cep }}</td>
              <td>{{ usuario.endereco }}</td>
              <td>{{ usuario.numero }}</td>
@@ -36,8 +36,9 @@
              <td>{{ usuario.cidade }}</td>
              <td>{{ usuario.estado }}</td>
              <td>
-                 <a href="{% url 'editar-usuario' usuario.pk %}" class="btn btn-warning btn-sm">Editar</a>
-                 <a href="{% url 'excluir-usuario' usuario.pk %}" class="btn btn-danger btn-sm">Excluir</a>
+                 {# <a href="{% url 'editar-usuario' usuario.username %}" class="btn btn-warning btn-sm">Editar</a>#}
+                 {# <a href="{% url 'excluir-usuario' usuario.username %}" class="btn btn-danger btn-sm">Excluir</a>#}
+
              </td>
          </tr>
 
@@ -48,11 +49,6 @@
         {% endfor %}
     </table>
     </div>
-
-
     </div>
-
-
-
 {% endblock %}
 

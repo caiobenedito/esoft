@@ -4,7 +4,7 @@ from .views import IndexView, SobreView,CadastrarView,HomeView,ProdutosView
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    url('inicio/', IndexView.as_view(), name='inicio'),
+    url('index/', IndexView.as_view(), name='inicio'),
     #url('username/', SobreView.as_view(), name='username'),
     #url('cadastrar/', CadastrarView.as_view(), name='cadastrar'),
     url('home/', HomeView.as_view(), name='home'),
